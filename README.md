@@ -62,6 +62,10 @@ Vendor ID: Asiga
 
 Model: 000
 
+![Asiga Tray Menu A](https://i.imgur.com/myg1b1s.jpg)
+
+![Asiga Tray Menu B](https://i.imgur.com/ACXr2Jf.jpg)
+
 ### Encryption Analysis
 
 - **Unique Key A:** After analyzing approximately 30 tags, it was observed that Asiga utilizes a unique Key A for each tag. Although a few duplicate keys were found, the overall analysis indicates that the keys are not susceptible to dictionary attacks. None of the keys in a dictionary of 3200 keys were found to match the Key A of any tag.
