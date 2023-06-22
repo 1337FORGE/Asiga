@@ -36,6 +36,30 @@ The structure of each block within a sector is as follows:
 
 To learn more about MF tags [click here](https://www.youtube.com/watch?v=RoiETfo_S4A).
 
+### Data that the tag holds
+
+According to the Tray Data section on the printer, these are the data that the tag holds:
+
+Created: Date the tray created (or the tag)
+
+First Used: ---
+
+Build Counts: ---
+
+Layer Count: ---
+
+Build Tray Usage: ---
+
+Capacity: ---
+
+Max Capacity: --- 
+
+Consumed: ---
+
+Vendor ID: Asiga
+
+Model: 000
+
 ### Encryption Analysis
 
 - **Unique Key A:** After analyzing approximately 30 tags, it was observed that Asiga utilizes a unique Key A for each tag. Although a few duplicate keys were found, the overall analysis indicates that the keys are not susceptible to dictionary attacks. None of the keys in a dictionary of 3200 keys were found to match the Key A of any tag.
@@ -51,14 +75,14 @@ These findings highlight the importance of assessing and strengthening the secur
 After dumping a tag the structure of a brand new tag is something like this:
 
 ```
-Sector 0: Containg manufacturing data and UID
+Sector 0: Containing manufacturing data and UID
 Block 0: XX XX XX XX XX XX XX 00 02 A6 XX XX XX XX XX XX
 Block 1: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Block 2: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Block 3: FF FF FF FF FF FF FF 07 80 69 FF FF FF FF FF FF
 
-Sector 1: This sector contains information about Build Tray Usage.
-I was able to successfully reset the tray usage to 0% by manipulating this sector.
+Sector 1: This sector contains information about Build Tray Usage
+I was able to successfully reset the tray usage to 0% by manipulating this sector
 Block 4: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Block 5: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 Block 6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
