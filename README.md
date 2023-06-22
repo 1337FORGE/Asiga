@@ -123,3 +123,5 @@ Block 24 to Block 63 hold static information about the tag. I assume this inform
 During my limited research with the Asiga Max printer and its RFID tags, I discovered interesting aspects of how the printer interacts with the tags. It was observed that the printer reads the tag every 5-10 seconds and writes new information onto it. By the end of my investigation, I successfully cracked, extracted, and manipulated the data stored on the tag.
 
 It is important to note that this research was conducted purely out of curiosity and for educational purposes. I did not have the opportunity to explore other printers utilizing similar principles or conduct further in-depth analysis. However, if I come across any additional printers with tags in the future, I will continue my research and share any new findings.
+
+Thanks for reading
