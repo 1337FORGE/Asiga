@@ -12,4 +12,26 @@ The RFID tag used in conjunction with the Asiga Max printer tray is a Chinese VM
 
 ![VM320708](https://i.imgur.com/DcwnnsJ.png)
 
+### About MiFare Classic 1K tags
+
+Mifare Classic 1K tags are widely used in various applications, including the Asiga Max printer trays. These tags consist of 16 sectors, with each sector containing 4 blocks, resulting in a total of 64 blocks.
+
+The structure of each block within a sector is as follows:
+
+* Block 0: Manufacturing Block (Sector 0)
+
+This block typically holds information about the tag itself, such as the Unique Identifier (UID) and other manufacturing-related data.
+
+* Block 1 to Block 64: Data Blocks (Sectors 0-15)
+
+These blocks store user data or information relevant to the specific application of the tag. The content and purpose of these blocks depend on the intended use case.
+Each block comprises three important components:
+
+Key A: This is a 6-byte key used for authentication and access control. It is essential to provide the correct Key A to access the data stored in the block.
+
+Access Bits: These bits determine the access rights for the block, specifying who can read, write, or increment the value stored within. The access bits control the permissions and security levels associated with the block.
+
+Key B: Similar to Key A, Key B is another 6-byte key used for authentication and access control. It provides an additional layer of security and can be used in conjunction with Key A or independently, depending on the specific implementation.
+
+
 ### Security of the tag
