@@ -8,3 +8,4 @@ Before I proceed, it is important to note that the information provided in this 
 
 ### About the Tag
 
+The RFID tag used in conjunction with the Asiga Max printer tray is a Chinese ![VM320708](https://i.imgur.com/DcwnnsJ.png). This tag operates in the High Frequency (HF) range at 13.56 MHz. Specifically, it belongs to the Mifare 1K 4-byte tag family.
