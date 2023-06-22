@@ -34,6 +34,6 @@ The structure of each block within a sector is as follows:
 
 - Key B: Similar to Key A, Key B is another 6-byte key used for authentication and access control. It provides an additional layer of security and can be used in conjunction with Key A or independently, depending on the specific implementation.
 
-To learn more about MF tags [click here]([https://www.google.com](https://www.blackhat.com/docs/sp-14/materials/arsenal/sp-14-Almeida-Hacking-MIFARE-Classic-Cards-Slides.pdf)https://www.blackhat.com/docs/sp-14/materials/arsenal/sp-14-Almeida-Hacking-MIFARE-Classic-Cards-Slides.pdf).
+To learn more about MF tags [click here](https://www.google.com](https://www.blackhat.com/docs/sp-14/materials/arsenal/sp-14-Almeida-Hacking-MIFARE-Classic-Cards-Slides.pdf)https://www.blackhat.com/docs/sp-14/materials/arsenal/sp-14-Almeida-Hacking-MIFARE-Classic-Cards-Slides.pdf).
 
 ### Encryption of Asiga Tags
