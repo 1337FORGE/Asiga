@@ -1,14 +1,14 @@
-# Security Analysis of Asiga Max 3D Printer: Cracking RFID Tags
+# Security Analysis of Asiga Max 3D Printer: Cracking NFC (RFID) Tags
 
 ### Introduction
-The Asiga Max 3D printer has gained popularity in the dental field for its exceptional precision and versatility. My focus in this research was the RFID tags embedded in the printer trays. These tags contain crucial information that the printer relies on for seamless operation. I set out to test the vulnerability of these RFID tags and exploit any weaknesses I discovered.
+The Asiga Max 3D printer has gained popularity in the dental field for its exceptional precision and versatility. My focus in this research was the NFC (RFID) tags embedded in the printer trays. These tags contain crucial information that the printer relies on for seamless operation. I set out to test the vulnerability of these NFC (RFID) tags and exploit any weaknesses I discovered.
 
 ### Important Note
-Before I proceed, it is important to note that the information provided in this article regarding the dump information is purely for demonstration purposes. It does not represent actual tag data or reveal any specific vulnerabilities present in the Asiga Max 3D printer's implementation. The intention is solely to shed light on the inner workings of RFID tags.
+Before I proceed, it is important to note that the information provided in this article regarding the dump information is purely for demonstration purposes. It does not represent actual tag data or reveal any specific vulnerabilities present in the Asiga Max 3D printer's implementation. The intention is solely to shed light on the inner workings of NFC (RFID) tags.
 
 ### About the Tag
 
-The RFID tag used in conjunction with the Asiga Max printer tray is a Chinese VM320708 paper tag. This tag operates in the High Frequency (HF) range at 13.56 MHz. Specifically, it belongs to the Mifare 1K 4-byte tag family.
+The NFC (RFID) tag used in conjunction with the Asiga Max printer tray is a Chinese VM320708 paper tag. This tag operates in the High Frequency (HF) range at 13.56 MHz. Specifically, it belongs to the Mifare 1K 4-byte tag family.
 
 ![VM320708](https://i.imgur.com/DcwnnsJ.png)
 
@@ -33,6 +33,10 @@ The structure of each block within a sector is as follows:
 - Access Bits: These bits determine the access rights for the block, specifying who can read, write, or increment the value stored within. The access bits control the permissions and security levels associated with the block.
 
 - Key B: Similar to Key A, Key B is another 6-byte key used for authentication and access control. It provides an additional layer of security and can be used in conjunction with Key A or independently, depending on the specific implementation.
+
+I ended up making an NFC (RFID) reader with an Arduino
+
+![RFID type reader](https://i.imgur.com/bmmiIMd.jpg)
 
 To learn more about MF tags [click here](https://www.youtube.com/watch?v=RoiETfo_S4A).
 
@@ -74,7 +78,7 @@ Model: 000
 
 - **Vulnerability to Nested Attack (MFOC):** All keys examined during the analysis were found to be vulnerable to the Nested attack technique, also known as MFOC. This attack method allows for the cracking of the encryption keys used in the tags.
 
-These findings highlight the importance of assessing and strengthening the security measures implemented in Asiga Max's RFID tags. The unique Key A implementation provides a level of protection against dictionary attacks.
+These findings highlight the importance of assessing and strengthening the security measures implemented in Asiga Max's NFC (RFID) tags. The unique Key A implementation provides a level of protection against dictionary attacks.
 
 ### Tag Analysis Findings:
 
@@ -124,7 +128,7 @@ Block 24 to Block 63 hold static information about the tag. I assume this inform
 
 
 ### Conclusion
-During my limited research with the Asiga Max printer and its RFID tags, I discovered interesting aspects of how the printer interacts with the tags. It was observed that the printer reads the tag every 5-10 seconds and writes new information onto it. By the end of my investigation, I successfully cracked, extracted, and manipulated the data stored on the tag.
+During my limited research with the Asiga Max printer and its NFC (RFID) tags, I discovered interesting aspects of how the printer interacts with the tags. It was observed that the printer reads the tag every 5-10 seconds and writes new information onto it. By the end of my investigation, I successfully cracked, extracted, and manipulated the data stored on the tag.
 
 It is important to note that this research was conducted purely out of curiosity and for educational purposes. I did not have the opportunity to explore other printers utilizing similar principles or conduct further in-depth analysis. However, if I come across any additional printers with tags in the future, I will continue my research and share any new findings.
 
